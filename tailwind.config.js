@@ -9,6 +9,7 @@ module.exports = {
     },
     fontFamily: {
       Source_Code_Pro: ["Source Code Pro, sans-serif"],
+      Inter: ["Inter, sans-serif"],
     },
     container: {
       padding: "2rem",
