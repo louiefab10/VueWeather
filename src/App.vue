@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-weather-primary">
+  <div class="flex flex-col min-h-screen bg-white">
     <SiteNavigation/>
     <RouterView v-slot="{Component}">
       <Transition name="page" mode="out-in">

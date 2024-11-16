@@ -1,8 +1,8 @@
 <template>
-  <main class="container text-white">
+  <main class="container text-black">
     <div class="pt-4 mb-8 relative">
-      <input type="text" v-model="searchQuery" @input="getSearchResults" placeholder="Search for a City" class="py-2 px-1 w-full bg-transparent border-b focus:border-weather-secondary focus:outline-none focus:shadow-[0px_1px_0_0_#004E71]">
-      <ul v-if="mapboxSearchResults" class="absolute bg-weather-secondary text-white w-full shadow-md py-2 px-1 top-[66px]">
+      <input type="text" v-model="searchQuery" @input="getSearchResults" placeholder="Search for a City" class="py-2 px-1 w-full bg-transparent border-b focus:border-coral focus:outline-none focus:shadow-[0px_1px_0_0_#004E71]">
+      <ul v-if="mapboxSearchResults" class="absolute bg-white text-coral w-full shadow-md py-2 px-1 top-[66px]">
         <p v-if="searchError">Sorry, something went wrong, please try again.</p>
         <p v-if="!serverError && mapboxSearchResults.length === 0">No results found, please try a different city.</p>
         <template v-else>
@@ -45,7 +45,7 @@ const previewCity = (searchResult) =>{
 }; 
 
 const searchQuery = ref("");
-const mapboxAPIKey = "pk.eyJ1IjoibG91aWVmYWIxMCIsImEiOiJjbTMxazRtamowenozMmxvZ2lxcTBlZjdlIn0.Qih9B8GACQhbFL-lwsbMQA";
+const mapboxAPIKey = import.meta.env.VITE_mapbox_api_key;
 const queryTimeout = ref(null);
 const mapboxSearchResults = ref(null);
 const searchError = ref(null);
